@@ -1,0 +1,169 @@
+{
+  "version": "36.0.25",
+  "artifacts": {
+    "CdkTypescriptStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkTypescriptStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkTypescriptStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://439497970624/us-east-1",
+      "properties": {
+        "templateFile": "CdkTypescriptStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::439497970624:role/cdk-hnb659fds-deploy-role-439497970624-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::439497970624:role/cdk-hnb659fds-cfn-exec-role-439497970624-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-439497970624-us-east-1/6a989fca55e4b0b702a9c2fe6c7ae8247a916cf40842f83c6d51be97455dbcad.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkTypescriptStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::439497970624:role/cdk-hnb659fds-lookup-role-439497970624-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkTypescriptStack.assets"
+      ],
+      "metadata": {
+        "/CdkTypescriptStack": [
+          {
+            "type": "aws:cdk:error",
+            "data": "Need to perform AWS calls for account 439497970624, but no credentials have been configured",
+            "trace": [
+              "Annotations.addMessage (/home/mango/Documents/CC/cdk-typescript/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addError (/home/mango/Documents/CC/cdk-typescript/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1100)",
+              "Function.getValue (/home/mango/Documents/CC/cdk-typescript/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1172)",
+              "Function.fromLookup (/home/mango/Documents/CC/cdk-typescript/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:9203)",
+              "new EC2InstanceStack (/home/mango/Documents/CC/cdk-typescript/lib/cdk-typescript-stack.ts:24:20)",
+              "Object.<anonymous> (/home/mango/Documents/CC/cdk-typescript/bin/cdk-typescript.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1546:14)",
+              "Module.m._compile (/home/mango/Documents/CC/cdk-typescript/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1691:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/mango/Documents/CC/cdk-typescript/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:1317:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:1127:12)",
+              "TracingChannel.traceSync (node:diagnostics_channel:315:14)",
+              "wrapModuleLoad (node:internal/modules/cjs/loader:217:24)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:166:5)",
+              "phase4 (/home/mango/Documents/CC/cdk-typescript/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/mango/Documents/CC/cdk-typescript/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/mango/Documents/CC/cdk-typescript/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/mango/Documents/CC/cdk-typescript/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1546:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1691:10)",
+              "Module.load (node:internal/modules/cjs/loader:1317:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:1127:12)",
+              "TracingChannel.traceSync (node:diagnostics_channel:315:14)",
+              "wrapModuleLoad (node:internal/modules/cjs/loader:217:24)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:166:5)",
+              "node:internal/main/run_main_module:30:49"
+            ]
+          }
+        ],
+        "/CdkTypescriptStack/InstanceName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceName"
+          }
+        ],
+        "/CdkTypescriptStack/AMI": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMI"
+          }
+        ],
+        "/CdkTypescriptStack/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceSecurityGroup896E10BF"
+          }
+        ],
+        "/CdkTypescriptStack/EC2Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2InstanceInstanceProfile4A6C6689"
+          }
+        ],
+        "/CdkTypescriptStack/EC2Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2Instance770AAE32"
+          }
+        ],
+        "/CdkTypescriptStack/InstanceId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceId"
+          }
+        ],
+        "/CdkTypescriptStack/InstancePublicIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstancePublicIP"
+          }
+        ],
+        "/CdkTypescriptStack/websimpleURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "websimpleURL"
+          }
+        ],
+        "/CdkTypescriptStack/webplantillaURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webplantillaURL"
+          }
+        ],
+        "/CdkTypescriptStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CdkTypescriptStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkTypescriptStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkTypescriptStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "missing": [
+    {
+      "key": "vpc-provider:account=439497970624:filter.isDefault=true:region=us-east-1:returnAsymmetricSubnets=true",
+      "provider": "vpc-provider",
+      "props": {
+        "account": "439497970624",
+        "region": "us-east-1",
+        "filter": {
+          "isDefault": "true"
+        },
+        "returnAsymmetricSubnets": true,
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::439497970624:role/cdk-hnb659fds-lookup-role-439497970624-us-east-1"
+      }
+    }
+  ]
+}

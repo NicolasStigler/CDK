@@ -1,0 +1,20 @@
+{
+  "version": "36.0.25",
+  "files": {
+    "6a989fca55e4b0b702a9c2fe6c7ae8247a916cf40842f83c6d51be97455dbcad": {
+      "source": {
+        "path": "CdkTypescriptStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "439497970624-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-439497970624-us-east-1",
+          "objectKey": "6a989fca55e4b0b702a9c2fe6c7ae8247a916cf40842f83c6d51be97455dbcad.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::439497970624:role/cdk-hnb659fds-file-publishing-role-439497970624-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
