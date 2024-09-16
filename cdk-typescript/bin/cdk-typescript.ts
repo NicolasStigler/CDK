@@ -3,6 +3,10 @@ import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { EC2InstanceStack } from '../lib/cdk-typescript-stack';
 
+const synth = new cdk.DefaultStackSynthesizer({
+  cloudFormationExecutionRole: 'arn:aws:iam::439497970624:role/LabRole'
+});
+
 const app = new cdk.App();
 new EC2InstanceStack(app, 'CdkTypescriptStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
@@ -16,6 +20,7 @@ new EC2InstanceStack(app, 'CdkTypescriptStack', {
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
   env: { account: '439497970624', region: 'us-east-1' },
+  synthesizer: synth
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
